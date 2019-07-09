@@ -56,6 +56,31 @@ ember build:fallback --prod
 
 check `index.html`
 
+`dist/index.html` before:
+
+```html
+<body>
+    <script src="/assets/vendor.js"></script>
+    <script src="/assets/dummy.js"></script>
+</body>
+```
+
+after:
+
+```html
+<body>
+    <script src="/assets/vendor.js" type="module"></script>
+    <script src="/assets/dummy.js" type="module"></script>
+
+    <script src="/assets/vendor.fb.js" nomodule></script>
+    <script src="/assets/dummy.fb.js" nomodule></script>
+</body>
+```
+
+new files: `vendor.fb.js`, `dummy.fb.js` - legacy js bundles (for older browsers)
+
+modern browser will load `script[type="module"]`, older - `script[nomodule]`
+
 done!
 
 
