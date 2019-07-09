@@ -1,6 +1,8 @@
 ember-cli-fallback-builds
 ==============================================================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/lifeart/ember-cli-fallback-builds.svg)](https://greenkeeper.io/)
+
 This addon allow to have 2 builds (for modern and legacy browsers) in one time.
 
 (module, nomodule)
