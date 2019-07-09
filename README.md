@@ -1,8 +1,9 @@
 ember-cli-fallback-builds
 ==============================================================================
 
-[Short description of the addon.]
+This addon allow to have 2 builds (for modern and legacy browsers) in one time.
 
+(module, nomodule)
 
 Compatibility
 ------------------------------------------------------------------------------
@@ -23,7 +24,20 @@ ember install ember-cli-fallback-builds
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+
+Configure your `config/targets.js`:
+```
+process.env.BUILD_TARGET = LEGACY | MODERN
+```
+
+run:
+```
+ember build:fallback --prod
+```
+
+check `index.html`
+
+done!
 
 
 Contributing
