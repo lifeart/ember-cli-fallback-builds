@@ -30,6 +30,25 @@ Configure your `config/targets.js`:
 process.env.BUILD_TARGET = LEGACY | MODERN
 ```
 
+Example:
+
+`config/targets.js`
+```js
+const browsers = [
+  'last 1 Chrome versions'
+];
+
+const isFallback = process.env.BUILD_TARGET === 'LEGACY';
+
+if (isFallback) {
+  browsers.push('ie 11');
+}
+
+module.exports = {
+  browsers
+};
+```
+
 run:
 ```
 ember build:fallback --prod
