@@ -2,10 +2,12 @@ ember-cli-fallback-builds
 ==============================================================================
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/lifeart/ember-cli-fallback-builds.svg)](https://greenkeeper.io/)
-
-This addon allow to have 2 builds (for modern and legacy browsers) in one time.
+This addon allow to have 2 builds (bundles) (for modern and legacy browsers) in one time.
 
 (module, nomodule)
+
+[Modern Script Loading](https://jasonformat.com/modern-script-loading/)
+[Pre-RFC: Generate and serve ES2015 assets](https://github.com/emberjs/rfcs/issues/383)
 
 Compatibility
 ------------------------------------------------------------------------------
@@ -21,7 +23,6 @@ Installation
 ```
 ember install ember-cli-fallback-builds
 ```
-
 
 Usage
 ------------------------------------------------------------------------------
@@ -57,6 +58,31 @@ ember build:fallback --prod
 ```
 
 check `index.html`
+
+`dist/index.html` before:
+
+```html
+<body>
+    <script src="/assets/vendor.js"></script>
+    <script src="/assets/dummy.js"></script>
+</body>
+```
+
+after:
+
+```html
+<body>
+    <script src="/assets/vendor.js" type="module"></script>
+    <script src="/assets/dummy.js" type="module"></script>
+
+    <script src="/assets/vendor.fb.js" nomodule></script>
+    <script src="/assets/dummy.fb.js" nomodule></script>
+</body>
+```
+
+new files: `vendor.fb.js`, `dummy.fb.js` - legacy js bundles (for older browsers)
+
+modern browser will load `script[type="module"]`, older - `script[nomodule]`
 
 done!
 
