@@ -1,11 +1,13 @@
 ember-cli-fallback-builds
 ==============================================================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/lifeart/ember-cli-fallback-builds.svg)](https://greenkeeper.io/)
 This addon allow to have 2 builds (bundles) (for modern and legacy browsers) in one time.
 
 (module, nomodule)
 
 [Modern Script Loading](https://jasonformat.com/modern-script-loading/)
+[Pre-RFC: Generate and serve ES2015 assets](https://github.com/emberjs/rfcs/issues/383)
 
 Compatibility
 ------------------------------------------------------------------------------
@@ -21,7 +23,6 @@ Installation
 ```
 ember install ember-cli-fallback-builds
 ```
-
 
 Usage
 ------------------------------------------------------------------------------
