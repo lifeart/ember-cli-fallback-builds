@@ -5,6 +5,8 @@ This addon allow to have 2 builds (for modern and legacy browsers) in one time.
 
 (module, nomodule)
 
+(Modern Script Loading)[https://jasonformat.com/modern-script-loading/]
+
 Compatibility
 ------------------------------------------------------------------------------
 
