@@ -11,6 +11,9 @@ This addon allow to have 2 builds (bundles) (for modern and legacy browsers) in 
 
 [Pre-RFC: Generate and serve ES2015 assets](https://github.com/emberjs/rfcs/issues/383)
 
+Alternatives: 
+* [ember-cli-babel-polyfills](https://github.com/pzuraq/ember-cli-babel-polyfills)
+
 Compatibility
 ------------------------------------------------------------------------------
 
